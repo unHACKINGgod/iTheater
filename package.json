@@ -1,0 +1,23 @@
+{
+  "name": "itheater",
+  "version": "1.0.0",
+  "description": "To be able to track every movie shoing in movie thear\u0016\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cw\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Ca movie theater in your city.",
+  "main": "\u001b[A",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unHACKINGgod/iTheater.git"
+  },
+  "keywords": [
+    "itheater"
+  ],
+  "author": "agboola olasunkanmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unHACKINGgod/iTheater/issues"
+  },
+  "homepage": "https://github.com/unHACKINGgod/iTheater#readme"
+}
