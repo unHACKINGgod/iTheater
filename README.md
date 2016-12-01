@@ -10,5 +10,7 @@
 
 #RESOURCE
 * Data Collection(We will create and collect our own data)
+
 #How To Run The Application
+
 * npm start
