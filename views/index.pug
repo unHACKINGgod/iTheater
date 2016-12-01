@@ -1,0 +1,15 @@
+html
+head
+body
+h1  CITY  |     THEATER    | MOVIE | START TIME
+<li>moscow| LANIGRADSCAYA  | SUITS | 17:00 </li>
+<li>london| CAENTER THEATER|  MIB  | 13:00 </li>
+
+mixin movie-card(movie)
+  div
+    h2= movie.name
+    div.ratings=movie.ratings
+    div= movie.discription
+
+for movie in moviedataInsideTemplate
+  +movie-card(movie)

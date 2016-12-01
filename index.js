@@ -1,9 +1,14 @@
-var http=require('http');
-
-var proccess = function(req,res){
-  res.end('<b> David is good</b>')
-}
-
-var server = http.createServer(proccess);
-
-server.listen(3000);
+var exp = require('express');
+var moviedata = require('./api/movies.js');
+app= exp();
+app.set('view engine', 'pug')
+console.log(moviedata);
+var Router = exp.Router();
+Router.get('/city/:moscow', function(req,res){
+  var seasionname=req.params.moscow;
+  res.render('index',{moscow: 'this ' +seasionname+', is good', moviedataInsideTemplate: moviedata})
+});
+app.use(Router);
+app.listen(5000,function(){
+  console.log('I\'m alive');
+});
