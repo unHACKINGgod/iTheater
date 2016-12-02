@@ -1,14 +1,15 @@
 html
 head
+  link(href='/public/main.css', rel='stylesheet')
 body
 mixin movie-card(movie)
   div
     h2= movie.name
     ul
       div.movie-card
-      img.movie-poster(src=movie.posterImage)
-      div.ratings=movie.ratings
-      div= movie.discription
+        img.movie-poster(src="/public/img/"+movie.posterImage)
+        div.ratings=movie.ratings
+        div= movie.discription
 
 
 
