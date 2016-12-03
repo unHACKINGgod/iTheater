@@ -1,6 +1,7 @@
 html
 head
   link(href='/public/main.css', rel='stylesheet')
+  
 body
 div
 h1#wrapper=issave
@@ -20,6 +21,10 @@ mixin movie-card(movie)
         img.movie-poster(src="/public/img/"+movie.posterImage)
         div.ratings.ratingshighlight=movie.ratings
         div= movie.discription
+    div#wrapper2
+      div.Certificate.certificatehighlight=movie.Certificate
+      div=movie.Director
+      div=movie.Stars
 
 
 
