@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="/public/main.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>{{namePage}}</h1>
+
+    <form action="/movie/add" method="get">
+     Movie name<br>
+     <input type="text" name="moviename"><br>
+     city:<br>
+     <input type="text" name="city"><br>
+     <select name="ratings">
+       <option value="1"> 1 start </option>
+       <option value="2"> 2 starts </option>
+       <option value="3"> 3 starts </option>
+       <option value="4"> 4 starts </option>
+       <option value="5"> 5 starts </option>
+     </select><br>
+     <input type="submit" name="send" value="send">
+    </form>
+  </body>
+</html>
