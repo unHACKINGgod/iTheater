@@ -2,13 +2,23 @@ html
 head
   link(href='/public/main.css', rel='stylesheet')
 body
+div
+h1#wrapper=issave
+div
+ p The goal is to be able to track every posible movie showing in a theater in your city.
+ p we will bring you the following
+ <li> Name Of The Theater.
+ <li> List Of movie(Name Of Movie, Type Of Movie).
+ <li> Movie Start Time.
+ <li> Search Parameter(City and Date)
+
 mixin movie-card(movie)
-  div
+  div#wrapper
     h2= movie.name
     ul
       div.movie-card
         img.movie-poster(src="/public/img/"+movie.posterImage)
-        div.ratings=movie.ratings
+        div.ratings.ratingshighlight=movie.ratings
         div= movie.discription
 
 

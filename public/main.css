@@ -6,7 +6,15 @@
 
 
 .movie-card {
-  background: blue;
-  width: 250px;
+  background: 96A537;
+  width: 650px;
   color: white;
+}
+
+#wrapper{
+  color: 7D2A69;
+}
+
+.ratingshighlight{
+  color: pink;
 }
