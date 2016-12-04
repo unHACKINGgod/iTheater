@@ -82,7 +82,7 @@ Stars: "Stars: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison",
 // Box Office: Weekend: $85.06M, Gross: $208.82M
 // // Watch Trailer Add to Watchlist
 // // Allied (2016) Poster
-// //
+// // 
 // // Allied (2016)
 //
 // Certificate R 124 min   -   Action | Drama | Romance | Thriller | War
