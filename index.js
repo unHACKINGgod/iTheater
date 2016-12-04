@@ -2,6 +2,7 @@ var exp = require('express');
 var mong= require('mongoose');
 var handlebars= require('express-handlebars');
 var bodyParser = require('body-parser');
+var request = require('request')
 mong.connect('mongodb://unc:landmine@ds117348.mlab.com:17348/itheater');
 var moviedata = require('./api/movies.js');
 app= exp();
@@ -15,6 +16,7 @@ var registrationModel = mong.model('registration',{FirstName:String,
 LastName: String,
 Email: String,
 Password: String});
+
 app.engine('handlebars', handlebars.create({
   defaulLayout: 'main',
   layoutsDir: './views/layouts',
@@ -34,6 +36,32 @@ Router.get('/city/:moscow', function(req,res){
 });
 Router.get('/movie/register', function(req,res){
   res.render("registeraddpage", {namePage: "Register To iTheater"});
+});
+Router.get('/movie/add', function(req,res){
+    var registrationFromRoute=req.query;
+    var registration= new registrationModel ({FirstName:registrationFromRoute.FirstName, LastName: registrationFromRoute.LastName, Email: registrationFromRoute.Email, Password: registrationFromRoute.Password });
+    registration.save(function(err){
+      if(err){
+        console.log(err);
+      }
+      res.redirect('/movie/addpage');
+    });
+});
+
+Router.get('/movie/search/:search', function(req,res){
+  var search=req.params.search;
+  /// http://www.omdbapi.com?s=
+  var options={
+      url: "http://www.omdbapi.com",
+      qs: {
+        s: search
+      },
+      json: true
+  };
+  request(options, function(err, response, body){
+    res.render('movie/search', {movieList: body['Search']});
+  })
+  // res.render('moviesearch'), {namePage: "search For Movies"});
 });
 Router.get('/movie/add', function(req,res){
     var registrationFromRoute=req.query;

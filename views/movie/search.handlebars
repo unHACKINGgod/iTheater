@@ -1,0 +1,14 @@
+<style media="screen">
+  body {background: white;}
+  .movie { margin-right: 50px; width: 300px; float: left; background: grey;}
+  .movie img {height: 150px;}
+</style>
+
+
+
+{{#each movieList}}
+  <div class="movie">
+    <b>{{Title}}</b>
+    <img src="{{Poster}}" alt="">
+  </div>
+{{/each}}
