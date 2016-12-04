@@ -80,10 +80,10 @@ Stars: "Stars: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison",
 // Director: Scott Derrickson
 // Stars: Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, Benedict Wong
 // Box Office: Weekend: $85.06M, Gross: $208.82M
-// Watch Trailer Add to Watchlist
-// Allied (2016) Poster
-//
-// Allied (2016)
+// // Watch Trailer Add to Watchlist
+// // Allied (2016) Poster
+// //
+// // Allied (2016)
 //
 // Certificate R 124 min   -   Action | Drama | Romance | Thriller | War
 //
