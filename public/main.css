@@ -1,5 +1,7 @@
 .movie-poster {
-  height: 100px;
+  height: 225px;
+  width: 150px;
+  border: 0;
 
 }
 
@@ -24,6 +26,10 @@
   height: auto;;
   width: auto;
 
+}
+.movieinfo{
+  color: red;
+  float:center;
 }
 #wrapper{
   color: #7D2A69;

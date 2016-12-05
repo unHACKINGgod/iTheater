@@ -17,6 +17,10 @@ LastName: String,
 Email: String,
 Password: String});
 
+var searchModel = {
+  moviename: String
+};
+
 app.engine('handlebars', handlebars.create({
   defaulLayout: 'main',
   layoutsDir: './views/layouts',
@@ -47,23 +51,24 @@ Router.get('/movie/add', function(req,res){
       res.redirect('/movie/addpage');
     });
 });
+Router.get('/movie/moviepage', function(req,res){
 
-Router.get('/movie/search/:search', function(req,res){
-  var search=req.params.search;
-  /// http://www.omdbapi.com?s=
+});
+
+Router.get('/movie/search/', function(req,res){
+  var search=req.query;
   var options={
       url: "http://www.omdbapi.com",
       qs: {
-        s: search
+        s: search.moviename
       },
       json: true
-  };
-  request(options, function(err, response, body){
-    
-    res.render('movie/search', {movieList: body['Search']});
-  })
-  // res.render('moviesearch'), {namePage: "search For Movies"});
+    };
+    request(options, function(err, response, body){
+      res.render('movie/search', {movieList: body['Search']})
+    })
 });
+
 Router.get('/movie/add', function(req,res){
     var registrationFromRoute=req.query;
     var registration= new registrationModel ({FirstName:registrationFromRoute.FirstName, LastName: registrationFromRoute.LastName, Email: registrationFromRoute.Email, Password: registrationFromRoute.Password });

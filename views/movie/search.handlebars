@@ -4,11 +4,18 @@
   .movie img {height: 150px;}
 </style>
 
+<form class="moviesearchfrom" action="/movie/search" method="get">
+  moviename<br>
+  <input type="text" name="moviename"></br>
 
+</form>
 
 {{#each movieList}}
   <div class="movie">
     <b>{{Title}}</b>
-    <img src="{{Poster}}" alt="">
+    <img class="movie-poster" src="{{Poster}}" alt="">
+    <br>Type:{{Type}}</br>
+    <br class="movieinfo">Year:{{Year}}</br>
+    <br>IMDb:{{imdbID}}<br>
   </div>
 {{/each}}
