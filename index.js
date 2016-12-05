@@ -59,6 +59,7 @@ Router.get('/movie/search/:search', function(req,res){
       json: true
   };
   request(options, function(err, response, body){
+    
     res.render('movie/search', {movieList: body['Search']});
   })
   // res.render('moviesearch'), {namePage: "search For Movies"});
