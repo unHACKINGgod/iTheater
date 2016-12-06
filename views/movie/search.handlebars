@@ -1,8 +1,15 @@
 <style media="screen">
-  body {background: white;}
-  .movie { margin-right: 50px; width: 300px; float: left; background: grey;}
-  .movie img {height: 150px;}
+  body {background: #2f4254;}
+  .searchbar{ width: auto; height: 50; background: #ed5a64; margin-bottom: 50px;}
+  .footer{ width: auto; height: 150px; background: #ed5a64; float: bottom; margin-top: 1000px; }
+  .movie { margin-right: 30px; margin-bottom: 20px; width: 200px; height:400; float: left; background:#16a085 ;   -webkit-box-shadow: inset 0 3px 3px #999;
+    -moz-box-shadow: inset 0 3px 3px #999;
+    box-shadow: 0px 0px 11px #999;
+    overflow: hidden;}
+  .movie img {height: 225px; margin-bottom:25px; border: 0; float: center;}
+  a{color: red; font-size: 20; font-style: arial ; font-style: bold;}
 </style>
+<div class="searchbar">
 
 <form class="moviesearchfrom" action="/movie/search" method="get">
   moviename<br>
@@ -10,12 +17,22 @@
 
 </form>
 
+</div>
 {{#each movieList}}
   <div class="movie">
-    <b>{{Title}}</b>
-    <img class="movie-poster" src="{{Poster}}" alt="">
+    <a href="#">{{Title}}</a>
+    <img src="{{Poster}}">
     <br>Type:{{Type}}</br>
     <br class="movieinfo">Year:{{Year}}</br>
     <br>IMDb:{{imdbID}}<br>
   </div>
 {{/each}}
+<script type="text/javascript">
+var Title = [{{Title}}];
+module.exports= Title;
+</script>
+<footer>
+  <div class="footer">
+
+  </div>
+</footer>

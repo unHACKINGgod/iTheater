@@ -5,9 +5,30 @@ var bodyParser = require('body-parser');
 var request = require('request')
 mong.connect('mongodb://unc:landmine@ds117348.mlab.com:17348/itheater');
 var moviedata = require('./api/movies.js');
+var imdb = require('imdb-api');
 app= exp();
 app.use(bodyParser.urlencoded({'extended':false}));
 app.use(bodyParser.json());
+
+// var imdbIDs = {
+//   imdbID: "{{imdbID}}",
+// };
+//
+// var imdbinfo = imdb.getReq({ id: 'imdbID' }, function(err, things) {
+//     var  imdbmovie = things
+//     console.log(imdbmovie);
+//         json:true
+//     request(imdbmovie, function(err, response, body){
+//       if (err){
+//         console.log("something is worng");
+//       }
+//      else {
+//           res.render('movie/search', {movieList: body['Search']})
+//         };
+//       });
+//
+//     });
+
 var moviemodel = mong.model("movies",{name:String,
 city: String,
 ratings: String});
@@ -48,7 +69,7 @@ Router.get('/movie/add', function(req,res){
       if(err){
         console.log(err);
       }
-      res.redirect('/movie/addpage');
+      res.redirect('/movie/search');
     });
 });
 Router.get('/movie/moviepage', function(req,res){
