@@ -6,6 +6,8 @@ var request = require('request')
 mong.connect('mongodb://unc:landmine@ds117348.mlab.com:17348/itheater');
 var moviedata = require('./api/movies.js');
 var imdb = require('imdb-api');
+
+
 app= exp();
 app.use(bodyParser.urlencoded({'extended':false}));
 app.use(bodyParser.json());
@@ -45,8 +47,9 @@ var searchModel = {
 app.engine('handlebars', handlebars.create({
   defaulLayout: 'main',
   layoutsDir: './views/layouts',
-  partialDir: './views/partials'
+  partialDir: './views/partials',
 }).engine);
+
 app.set('view engine', 'handlebars');
 // mongodb://<dbuser>:<dbpassword>@ds117348.mlab.com:17348/itheater
 // console.log(moviedata);
@@ -73,8 +76,18 @@ Router.get('/movie/add', function(req,res){
     });
 });
 Router.get('/movie/moviepage', function(req,res){
+  res.render('movie/moviepage')
 
 });
+Router.get('/movie/login', function(req,res){
+  res.render('movie/login');
+});
+
+
+Router.get('/movie/moviepage', function(req,res){
+
+});
+
 
 Router.get('/movie/search/', function(req,res){
   var search=req.query;
@@ -86,6 +99,7 @@ Router.get('/movie/search/', function(req,res){
       json: true
     };
     request(options, function(err, response, body){
+      console.log(body['Search']);
       res.render('movie/search', {movieList: body['Search']})
     })
 });
