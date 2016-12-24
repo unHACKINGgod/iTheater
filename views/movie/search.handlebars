@@ -1,10 +1,17 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<meta name="viewport" content="width=device-width; height=device-height;">
+<style>
+.mySlides {display:none;}
+</style>
 <style media="screen">
   .searchbar{ width: auto; height: 50; background: #ed5a64; margin-bottom: 50px;}
-  .footer{ width: auto; height: 150px; background: #ed5a64; float: bottom; margin-top: 1000px; }
+  .footer{ width: auto; height: 150px; background: #ed5a64; float: bottom; margin-top: 200px; }
   .movie { margin-right: 30px; margin-bottom: 20px; width: 200px; height:400; float: left; background:#16a085 ;   -webkit-box-shadow: inset 0 3px 3px #999;
     -moz-box-shadow: inset 0 3px 3px #999;
     box-shadow: 0px 0px 11px #999;
     overflow: hidden;}
+    .slidebackground{background-color:  #330011}
   .movie img {height: 225px; margin-bottom:25px; border: 0; float: center;}
   .logreg { float: right; margin-left: }
   a{color: red; font-size: 20; font-style: arial ; font-style: bold;}
@@ -32,7 +39,10 @@ p {color: white;}
   <a href="/movie/register" >Register</a> <a href="/movie/login">Login</a>
 </div>
 
+</div>
+<div class="slidebackground">
 
+<h2 class="w3-center" style="color:white">iTheater</h2>
 </div>
 {{#each movieList}}
   <div class="movie">
@@ -47,6 +57,35 @@ p {color: white;}
 var Title = [{{Title}}];
 module.exports= Title;
 </script>
+
+<div class="w3" style="width:auto; float:center;">
+  <img class="mySlides" src="https://i.gadgets360cdn.com/large/Rogue_One_A_Star_Wars_Story_Trailer_1476424835229.jpeg" style="width:1442px; height:461px;">
+  <img class="mySlides" src="https://i.ytimg.com/vi/BhweXdk2ztY/maxresdefault.jpg" style="width:1480px; height:461px;">
+  <img class="mySlides" src="https://i.ytimg.com/vi/3GDns1qjPpM/maxresdefault.jpg" style="width:1442px; height:461px;">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+<div class="w3-center" style="margin-top:30px">iTheater is the best search engine for movie that are online completely free. No download, no surveys and only instant streaming of movies.
+  The latest movies and highest quality for you. search and stream your favorite movies with iTheater
+</div>
+
+
 <footer>
   <div class="footer">
     <p>

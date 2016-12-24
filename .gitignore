@@ -4,5 +4,7 @@ ehlo*
 server01*
 /public/assets/*
 app.json*
-        itheater/*
-        npm-debug.log*
+itheater/*
+npm-debug.log*
+views/movie/dragon-ball-super.jpg*
+views/movie/home.handlebars*

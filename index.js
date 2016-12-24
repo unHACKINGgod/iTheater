@@ -127,7 +127,9 @@ Router.get('/movie/add', function(req,res){
     res.redirect('/movie/addpage');
   });
 });
-
+Router.get('movie/home', function(req,res){
+  res.render('movie/home');
+});
 app.use(Router);
 
 app.get("*", function(req, res) {
@@ -137,5 +139,4 @@ app.get("*", function(req, res) {
 app.use('/public', exp.static('public'));
 app.listen(process.env.PORT || 5000,function(){
   console.log(process.env.PORT);
-  console.log('I/m alive');
 });
