@@ -129,6 +129,6 @@ Router.get('/movie/add', function(req,res){
 });
 app.use(Router);
 app.use('/public', exp.static('public'));
-app.listen(5000,function(){
-  console.log('I\'m alive');
+app.listen(process.env.PORT || 5000,function(){
+  console.log(process.env.PORT);
 });

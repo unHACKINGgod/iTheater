@@ -3,3 +3,6 @@
 ehlo*
 server01*
 /public/assets/*
+app.json*
+        itheater/*
+        npm-debug.log*
