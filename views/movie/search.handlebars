@@ -7,6 +7,17 @@
 <style>
 .mySlides {display:none;}
 </style>
+<script type='text/javascript'>(function(w) {  if(navigator.userAgent.match(/iPhone|iPod|iPad|Android/i)==null)return;  var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('style'),j=d.createElement('script'),k=d.createElement('script');  s.setAttribute('rel','mw-page-block');s.innerHTML='body > * {display:none !important}';  j.setAttribute('src','//cdn.adsoptimal.com/advertisement/settings/43491.js');  k.setAttribute('src','//cdn.adsoptimal.com/advertisement/dispatcher.js');  j.onerror=k.onerror=function(){h.removeChild(s);h.removeChild(j);h.removeChild(k);};  h.appendChild(s);h.appendChild(j);h.appendChild(k);})(window);</script>
+<script type='text/javascript'>
+  (function(w) {
+  var d=document,h=d.getElementsByTagName('head')[0],j=d.createElement('script'),k=d.createElement('script');
+  j.setAttribute('src','//cdn.adsoptimal.com/advertisement/settings/43491.js');
+  k.setAttribute('src','//cdn.adsoptimal.com/advertisement/manual.js');
+  h.appendChild(j);
+  h.appendChild(k);
+  })(window);
+  </script>
+
 <style media="screen">
   .searchbar{ width: auto; height: 50; background: #ed5a64; margin-bottom: 50px;}
   .footer{ width: auto; height: 150px; background: #ed5a64; float: bottom; margin-top: 200px; }
@@ -48,6 +59,7 @@ p {color: white;}
 
 <h2 class="w3-center" style="color:white" href ="http://itheater.herokuapp.com/movie/search">iTheater</h2>
 </div>
+<div class="adsoptimal-slot" style="width: 728px; height: 90px;"></div>
 {{#each movieList}}
   <div class="movie">
     <a href="http://putlockers.ch/search/search.php?q={{Title}}" target="_blank">{{Title}}</a>
@@ -91,8 +103,9 @@ function carousel() {
 
 <footer>
   <div class="footer">
-    <p>
 
+<div class="adsoptimal-slot" style="width: 300px; height: 100px; float:right;"></div>
+<p>
 <b>Disclaimer:</b> iTheater is absolutely legal and contain only links to other sites on the Internet, If you have any legal issues please contact the appropriate media file owners or host sites.
 <p> &copy; 2016 I-wura Technologies </p>
 <p>           ...The Developers Lamp</p>

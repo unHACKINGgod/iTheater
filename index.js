@@ -127,6 +127,7 @@ Router.get('/movie/add', function(req,res){
     res.redirect('/movie/addpage');
   });
 });
+
 Router.get('movie/home', function(req,res){
   res.render('movie/home');
 });
