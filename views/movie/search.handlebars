@@ -40,13 +40,13 @@ p {color: white;}
 <body background="./public/img/bg.jpg">
 
 <div class="logreg">
-  <a href="/movie/register" >Register</a> <a href="/movie/login">Login</a>
+  <a href="/movie/search">HOME</a> <a href="/movie/register" >Register</a> <a href="/movie/login">Login</a>
 </div>
 
 </div>
-<div class="slidebackground">
+<div class="slidebackground" >
 
-<h2 class="w3-center" style="color:white">iTheater</h2>
+<h2 class="w3-center" style="color:white" href ="http://itheater.herokuapp.com/movie/search">iTheater</h2>
 </div>
 {{#each movieList}}
   <div class="movie">
@@ -62,10 +62,10 @@ var Title = [{{Title}}];
 module.exports= Title;
 </script>
 
-<div class="w3" style="width:auto; float:center;">
-  <img class="mySlides" src="https://i.gadgets360cdn.com/large/Rogue_One_A_Star_Wars_Story_Trailer_1476424835229.jpeg" style="width:1442px; height:461px;">
-  <img class="mySlides" src="https://i.ytimg.com/vi/BhweXdk2ztY/maxresdefault.jpg" style="width:1480px; height:461px;">
-  <img class="mySlides" src="https://i.ytimg.com/vi/3GDns1qjPpM/maxresdefault.jpg" style="width:1442px; height:461px;">
+<div class="" style="width:auto;">
+  <img class="mySlides" src="https://i.gadgets360cdn.com/large/Rogue_One_A_Star_Wars_Story_Trailer_1476424835229.jpeg" style="width:1622px; height:461px;">
+  <img class="mySlides" src="https://i.ytimg.com/vi/BhweXdk2ztY/maxresdefault.jpg" style="width:1622px; height:461px;">
+  <img class="mySlides" src="https://i.ytimg.com/vi/3GDns1qjPpM/maxresdefault.jpg" style="width:1622px; height:461px;">
 </div>
 
 <script>
@@ -85,7 +85,7 @@ function carousel() {
 }
 </script>
 
-<div class="info" style="margin-top:30px; float:center; color:red;">iTheater is the best search engine for movie that are online completely free. No download, no surveys and only instant streaming of movies.
+<div class="w3-center" style="color:red; margin-top:25px;">iTheater is the best search engine for movie that are online completely free. No download, no surveys and only instant streaming of movies.
   The latest movies and highest quality for you. search and stream your favorite movies with iTheater
 </div>
 
@@ -94,6 +94,9 @@ function carousel() {
     <p>
 
 <b>Disclaimer:</b> iTheater is absolutely legal and contain only links to other sites on the Internet, If you have any legal issues please contact the appropriate media file owners or host sites.
+<p> &copy; 2016 I-wura Technologies </p>
+<p>           ...The Developers Lamp</p>
+<p>Contact: itheater@delandev.com </p>
 </p>
 
 
