@@ -1,16 +1,13 @@
 # iTheater
-* The goal is to be able to track every posible movie showing in a theater in your city.
+* The goal is to be able to track every posible movie or tv show available for streaming online for free.
 
 #OUT PUT
 
-* Name Of The Theater.
-* List Of movie(Name Of Movie, Type Of Movie).
-* Movie Start Time.
-* Search Parameter(City and Date)
+* Movies & Tv Shows
 
 #RESOURCE
 * Data Collection(We will create and collect our own data)
 
 #How To Run The Application
 
-* npm start
+* node index.js
