@@ -50,7 +50,7 @@ app.engine('handlebars', handlebars.create({
   partialDir: './views/partials',
 }).engine);
 
-app.set('view engine', 'handlebars');
+app.set('view engine', 'handlebars', 'html');
 // mongodb://<dbuser>:<dbpassword>@ds117348.mlab.com:17348/itheater
 // console.log(moviedata);
 var Router = exp.Router();
@@ -114,8 +114,8 @@ Router.get('/movie/add', function(req,res){
       res.redirect('/movie/addpage');
     });
 });
-Router.get('/movie/addpage', function(req,res){
-  res.render('movieaddpage', {namePage: "Form For Movies"});
+Router.get('/movie/google2254da6d286b6de0', function(req,res){
+  res.render('movie/google2254da6d286b6de0');
 });
 Router.get('/movie/add', function(req,res){
   var movieFromRoute=req.query;
