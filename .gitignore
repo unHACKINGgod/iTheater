@@ -8,3 +8,4 @@ itheater/*
 npm-debug.log*
 views/movie/dragon-ball-super.jpg*
 views/movie/home.handlebars*
+moviedb/*

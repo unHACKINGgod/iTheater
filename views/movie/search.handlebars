@@ -1,6 +1,7 @@
 <head>
 <title>iTheater</title>
 <script data-cfasync="false" src="//dqhu0lvuvqh74.cloudfront.net/?luhqd=620341"></script>
+<script data-cfasync="false" src="//d1re760tkiprs5.cloudfront.net/?kterd=635590"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <meta name="viewport" content="width=device-width; height=device-height;">
@@ -21,7 +22,7 @@
 <style media="screen">
   .searchbar{ width: auto; height: 50; background: #ed5a64; margin-bottom: 50px;}
   .footer{ width: auto; height: 150px; background: #ed5a64; float: bottom; margin-top: 200px; }
-  .movie { margin-right: 30px; margin-bottom: 20px; width: 200px; height:400; float: left; background:#16a085 ;   -webkit-box-shadow: inset 0 3px 3px #999;
+  .movie { margin-right: 30px; margin-bottom: 20px; width: 200px; height:450; float: left; background:#16a085 ;   -webkit-box-shadow: inset 0 3px 3px #999;
     -moz-box-shadow: inset 0 3px 3px #999;
     box-shadow: 0px 0px 11px #999;
     overflow: hidden;}
@@ -42,16 +43,40 @@ p {color: white;}
 </style>
 <div class="searchbar">
 
-<form class="moviesearchfrom" action="/movie/search" method="get">
-  moviename<br>
-   <input type="text" name="moviename" placeholder="Search Movie Here..">
+  <form class="moviesearchfrom" action="/movie/search" method="get">
+    moviename<br>
+     <input type="text" name="moviename" placeholder="Search Movie Here.."><button>search</button></input>
 
-</form>
+  </form>
+<script type="text/javascript">
+$(function() {
+  var url = 'http://api.themoviedb.org/3',
+      mode = 'search/movie',
+      input,
+      movieName,
+      key = '?api_key=089582656a42a7ee8791bfae474c55ca';
+
+  $('button').click(function() {
+      var input = $('#movie').val(),
+          movieName = encodeURI(input);
+      $.ajax({
+          url: url + mode + key + '&query='+movieName ,
+          dataType: 'jsonp',
+          success: function(data,res){}
+          request(data, function(err,response,body){
+           console.log(body['Search']);
+           res.render('movie/search',body['Search'])
+})
+      });
+  });
+});
+</script>
+
 </head>
 <body background="./public/img/bg.jpg">
 
 <div class="logreg">
-  <a href="/movie/search">HOME</a> <a href="/movie/register" >Register</a> <a href="/movie/login">Login</a>
+  <a href="/movie/search" style="float:left;">HOME</a> <a href="/movie/register" >Register</a> <a href="/movie/login">Login</a
 </div>
 
 </div>
@@ -67,6 +92,7 @@ p {color: white;}
     <br>Type:{{Type}}</br>
     <br class="movieinfo">Year:{{Year}}</br>
     <br>IMDb:{{imdbID}}<br>
+     <a href="http://xmovies8.tv/movies/search?s={{Title}}"><button>Alternative link</button></a>
   </div>
 {{/each}}
 <script type="text/javascript">
