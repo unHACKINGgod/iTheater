@@ -6,30 +6,14 @@ var request = require('request')
 mong.connect('mongodb://unc:landmine@ds117348.mlab.com:17348/itheater');
 var moviedata = require('./api/movies.js');
 var imdb = require('imdb-api');
+var youtubeSearch = require('youtube-search');
 
 
 app= exp();
 app.use(bodyParser.urlencoded({'extended':false}));
 app.use(bodyParser.json());
 
-// var imdbIDs = {
-//   imdbID: "{{imdbID}}",
-// };
-//
-// var imdbinfo = imdb.getReq({ id: 'imdbID' }, function(err, things) {
-//     var  imdbmovie = things
-//     console.log(imdbmovie);
-//         json:true
-//     request(imdbmovie, function(err, response, body){
-//       if (err){
-//         console.log("something is worng");
-//       }
-//      else {
-//           res.render('movie/search', {movieList: body['Search']})
-//         };
-//       });
-//
-//     });
+
 
 var moviemodel = mong.model("movies",{name:String,
 city: String,
@@ -104,16 +88,6 @@ Router.get('/movie/search/', function(req,res){
     })
 });
 
-Router.get('/movie/add', function(req,res){
-    var registrationFromRoute=req.query;
-    var registration= new registrationModel ({FirstName:registrationFromRoute.FirstName, LastName: registrationFromRoute.LastName, Email: registrationFromRoute.Email, Password: registrationFromRoute.Password });
-    registration.save(function(err){
-      if(err){
-        console.log(err);
-      }
-      res.redirect('/movie/addpage');
-    });
-});
 Router.get('/movie/google2254da6d286b6de0', function(req,res){
   res.render('movie/google2254da6d286b6de0');
 });
@@ -130,6 +104,36 @@ Router.get('/movie/add', function(req,res){
 Router.get('movie/home', function(req,res){
   res.render('movie/home');
 });
+
+// http://hostname/movie/ttxxxxxxx
+app.get('/movie/get', function(req,res){
+  var id = req.query.id;
+
+  imdb.getById(id).then(function (movie) {
+    var title = movie.title;
+    var year = movie._year_data;
+
+    var opts = {
+      maxResults: 1,
+      key: 'AIzaSyATNFgR-l64ahNmgkfdy56-1BU5RRIY9L8'
+    };
+
+    var searchQuery = title + ' trailer ' + year;
+    console.log("Query", searchQuery);
+
+    youtubeSearch(searchQuery, opts, function(err, results) {
+      if (err) {
+        console.log('Failed to make search:', err);
+        res.status(500).send('Couldn\'t find a trailer!');
+        return;
+      }
+
+      var youtubeID = results[0].id;
+      res.render('movie/get', { id: youtubeID });
+    });
+  });
+});
+
 app.use(Router);
 
 app.get("*", function(req, res) {

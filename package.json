@@ -27,7 +27,7 @@
     "express-handlebars": "^3.0.0",
     "googleapis": "^16.0.0",
     "handlebars": "^4.0.6",
-    "imdb-api": "^2.2.0",
+    "imdb-api": "^2.2.1",
     "jQuery": "^1.7.4",
     "mongoose": "^4.7.1",
     "moviedb": "^0.2.7",
@@ -36,6 +36,7 @@
     "request": "^2.79.0",
     "themoviedb": "^0.1.0",
     "tmdb-node": "^0.8.1",
-    "tmdbv3": "^0.1.2"
+    "tmdbv3": "^0.1.2",
+    "youtube-search": "^1.0.7"
   }
 }
