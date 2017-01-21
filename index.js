@@ -5,14 +5,13 @@ var bodyParser = require('body-parser');
 var request = require('request')
 mong.connect('mongodb://unc:landmine@ds117348.mlab.com:17348/itheater');
 var moviedata = require('./api/movies.js');
+var searchYoutube = require('./views/movie/search.handlebars')
 var imdb = require('imdb-api');
 var youtubeSearch = require('youtube-search');
-
 
 app= exp();
 app.use(bodyParser.urlencoded({'extended':false}));
 app.use(bodyParser.json());
-
 
 
 var moviemodel = mong.model("movies",{name:String,
@@ -34,7 +33,7 @@ app.engine('handlebars', handlebars.create({
   partialDir: './views/partials',
 }).engine);
 
-app.set('view engine', 'handlebars', 'html');
+app.set('view engine', 'handlebars','jQuery','bootstrap');
 // mongodb://<dbuser>:<dbpassword>@ds117348.mlab.com:17348/itheater
 // console.log(moviedata);
 var Router = exp.Router();

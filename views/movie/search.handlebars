@@ -1,5 +1,25 @@
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+    .modal-content iframe{
+        margin: 0 auto;
+        display: block;
+    }
+</style>
+
+</script>
 <title>iTheater</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
 <script data-cfasync="false" src="//dqhu0lvuvqh74.cloudfront.net/?luhqd=620341"></script>
 <script data-cfasync="false" src="//d1re760tkiprs5.cloudfront.net/?kterd=635590"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,10 +49,81 @@
   })(window);
   </script>
 
-<style media="screen">
+  <style>
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+  }
+
+  @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+  }
+
+  /* The Close Button */
+  .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .modal-header {
+      padding: 2px 16px;
+      background-color: #5cb85c;
+      color: white;
+  }
+
+  .modal-body {padding: 2px 16px;}
+
+  .modal-footer {
+      padding: 2px 16px;
+      background-color: #5cb85c;
+      color: white;
+  }
+
   .searchbar{ width: auto; height: 50; background: #ed5a64; margin-bottom: 50px;}
+  .btn{color: white;}
   .footer{ width: auto; height: 150px; background: #ed5a64; float: bottom; margin-top: 200px; }
-  .movie { margin-right: 30px; margin-bottom: 20px; width: 200px; height:450; float: left; background:#16a085 ;   -webkit-box-shadow: inset 0 3px 3px #999;
+  .movie { margin-right: 30px; margin-bottom: 20px; width: 200px; height:540; float: left; background:#16a085 ;   -webkit-box-shadow: inset 0 3px 3px #999;
     -moz-box-shadow: inset 0 3px 3px #999;
     box-shadow: 0px 0px 11px #999;
     overflow: hidden;}
@@ -59,35 +150,19 @@ p {color: white;}
      <input type="text" name="moviename" placeholder="Search Movie Here.."><button>search</button></input>
 
   </form>
-<script type="text/javascript">
-$(function() {
-  var url = 'http://api.themoviedb.org/3',
-      mode = 'search/movie',
-      input,
-      movieName,
-      key = '?api_key=089582656a42a7ee8791bfae474c55ca';
 
-  $('button').click(function() {
-      var input = $('#movie').val(),
-          movieName = encodeURI(input);
-      $.ajax({
-          url: url + mode + key + '&query='+movieName ,
-          dataType: 'jsonp',
-          success: function(data,res){}
-          request(data, function(err,response,body){
-           console.log(body['Search']);
-           res.render('movie/search',body['Search'])
-})
-      });
-  });
-});
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/redmond/jquery-ui.css" rel="stylesheet" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
 </script>
+
 
 </head>
 <body background="./public/img/bg.jpg">
 
 <div class="logreg">
-  <a class="homebttn" href="/movie/search">HOME</a> <a href="/movie/register" >Register</a> <a href="/movie/login">Login</a>
+  <a class="homebttn" href="/movie/search"><button class="btn" style="background-color:red;">HOME</button></a> <a href="/movie/register" ><button class="btn" style="background-color:red;">Register</button></a> <a href="/movie/login"><button class="btn" style="background-color:red;">Login</button></a>
 </div>
 </div>
 <div class="slidebackground" >
@@ -102,9 +177,66 @@ $(function() {
     <br>Type:{{Type}}</br>
     <br class="movieinfo">Year:{{Year}}</br>
     <br>IMDb:{{imdbID}}<br>
-     <a href="http://xmovies8.tv/movies/search?s={{Title}}"><button>Alternative link</button></a>
+    <a href="http://putlockers.ch/search/search.php?q={{Title}}"><button style=" background-color:#AAA939;" id="{{id}}">Watch movie</button></a>
+    <!-- Trigger/Open The Modal -->
+<button id="myBtn" class="btn" style="background-color:	#AA0000;">Watch Trailer </button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>{{Title}} Trailer </h2>
+    </div>
+    <div class="modal-body">
+      <iframe width="650" height="350" src="http://localhost:5000/movie/get?id={{imdbID}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript">
+  var Trailerid = [{{imdbID}}];
+  module.exports = Trailerid;
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
   </div>
 {{/each}}
+<script >
+	$(function () {
+		$(".youtube").YouTubeModal({autoplay:0, width:640, height:480});
+	});
+</script>
+
 <script type="text/javascript">
 var Title = [{{Title}}];
 module.exports= Title;
@@ -133,8 +265,7 @@ function carousel() {
 }
 </script>
 
-<div class="w3-center" style="color:red; margin-top:25px;">iTheater is the best search engine for movie that are online completely free. No download, no surveys and only instant streaming of movies.
-  The latest movies and highest quality for you. search and stream your favorite movies with iTheater
+<div class="w3-center" style="color:red; margin-top:25px;">
 </div>
 
 <footer>

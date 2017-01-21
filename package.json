@@ -29,6 +29,7 @@
     "handlebars": "^4.0.6",
     "imdb-api": "^2.2.1",
     "jQuery": "^1.7.4",
+    "jquery-modal": "^0.8.0",
     "mongoose": "^4.7.1",
     "moviedb": "^0.2.7",
     "nodemon": "^1.11.0",
