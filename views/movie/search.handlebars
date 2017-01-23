@@ -179,8 +179,8 @@ p {color: white;}
     <br>IMDb:{{imdbID}}<br>
     <a href="http://xmovies8.tv/movies/search?s={{Title}}" target="_blank"><button style=" background-color:#AAA939;" id="{{id}}">Watch movie</button></a>
     <!-- Trigger/Open The Modal -->
-<button id="myBtn" class="btn" style="background-color:	#AA0000;">Watch Trailer </button>
-
+    <button id="myBtn" class="btn" style="background-color:	#AA0000;">Watch Trailer </button>
+</div>
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -191,13 +191,12 @@ p {color: white;}
       <h2>{{Title}} Trailer </h2>
     </div>
     <div class="modal-body">
-      <iframe width="650" height="350" src="http://localhost:5000/movie/get?id={{imdbID}}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="650" height="350" src="http://itheater.herokuapp.com/movie/get?id={{imdbID}}" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="modal-footer">
     </div>
   </div>
 
-</div>
 <script type="text/javascript">
   var Trailerid = [{{imdbID}}];
   module.exports = Trailerid;
