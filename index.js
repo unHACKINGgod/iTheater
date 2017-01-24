@@ -70,9 +70,7 @@ Router.get('/movie/login', function(req,res){
 Router.get('/movie/moviepage', function(req,res){
 
 });
-
-
-Router.get('/movie/search/', function(req,res){
+Router.get('/movie/search', function(req,res){
   var search=req.query;
   var options={
       url: "http://www.omdbapi.com",
@@ -85,6 +83,13 @@ Router.get('/movie/search/', function(req,res){
       console.log(body['Search']);
       res.render('movie/search', {movieList: body['Search']})
     })
+
+});
+
+
+Router.get('/movie/landpage/', function(req,res){
+  res.render('movie/landpage')
+
 });
 
 Router.get('/movie/google2254da6d286b6de0', function(req,res){
@@ -136,7 +141,7 @@ app.get('/movie/get', function(req,res){
 app.use(Router);
 
 app.get("*", function(req, res) {
-  res.redirect('/movie/search');
+  res.redirect('/movie/landpage');
 });
 
 app.use('/public', exp.static('public'));
