@@ -11,4 +11,4 @@ views/movie/home.handlebars*
 moviedb/*
 bootstrap.youtubepopup.js/*
 bootstrap.youtubepopup.min.js/*
-views/Bootstrap-Youtube-Popup-Player-Plugin/*
+views/Bootstrap-Youtube-Popup-Player-Plugin*
