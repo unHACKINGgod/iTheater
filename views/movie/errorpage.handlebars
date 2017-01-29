@@ -1,8 +1,6 @@
 <head>
-  <meta name="description" content="search for Your favourite movies"&" Tv Shows and get Multiple direct links to watch them online For free. also watch HD Trailer of all your favourite Tv Shows.">
-  <meta name="keywords" content="watch movie, {{title}} movie tailer, watch {{title}}, movie search engine,">
-  <meta name="author" content="Agboola Olasunkanmi">
-  <meta name="propeller" content="3c2777ac8433682713750140d77722c5" />
+  <title>itheater|Search Movie</title>
+<style>
 <style>
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -13,6 +11,7 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
 /* Set a style for all buttons */
 button {
   background-color: #4CAF50;
@@ -23,29 +22,35 @@ button {
   cursor: pointer;
   width: 100%;
 }
+
 /* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
 }
+
 /* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
 }
+
 img.avatar {
   width: 40%;
   border-radius: 50%;
 }
+
 .container {
   padding: 16px;
 }
+
 span.psw {
   float: right;
   padding-top: 16px;
 }
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -60,6 +65,7 @@ span.psw {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -67,6 +73,7 @@ span.psw {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
 /* The Close Button (x) */
 .close {
   position: absolute;
@@ -76,24 +83,29 @@ span.psw {
   font-size: 35px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: red;
   cursor: pointer;
 }
+
 /* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
 }
+
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)}
   to {-webkit-transform: scale(1)}
 }
+
 @keyframes animatezoom {
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -148,6 +160,7 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+
 input[type=text]:focus {
     width: 100%;
 }
@@ -170,8 +183,10 @@ input[type=text]:focus {
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
   ga('create', 'UA-89669362-1', 'auto');
   ga('send', 'pageview');
+
 </script>
 <script type='text/javascript'>(function(w) {  if(navigator.userAgent.match(/iPhone|iPod|iPad|Android/i)==null)return;  var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('style'),j=d.createElement('script'),k=d.createElement('script');  s.setAttribute('rel','mw-page-block');s.innerHTML='body > * {display:none !important}';  j.setAttribute('src','//cdn.adsoptimal.com/advertisement/settings/43491.js');  k.setAttribute('src','//cdn.adsoptimal.com/advertisement/dispatcher.js');  j.onerror=k.onerror=function(){h.removeChild(s);h.removeChild(j);h.removeChild(k);};  h.appendChild(s);h.appendChild(j);h.appendChild(k);})(window);</script>
 <script type='text/javascript'>
@@ -199,6 +214,7 @@ input[type=text]:focus {
       background-color: rgb(0,0,0); /* Fallback color */
       background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
+
   /* Modal Content */
   .modal-content {
       position: relative;
@@ -213,15 +229,18 @@ input[type=text]:focus {
       animation-name: animatetop;
       animation-duration: 0.4s
   }
+
   /* Add Animation */
   @-webkit-keyframes animatetop {
       from {top:-300px; opacity:0}
       to {top:0; opacity:1}
   }
+
   @keyframes animatetop {
       from {top:-300px; opacity:0}
       to {top:0; opacity:1}
   }
+
   /* The Close Button */
   .close {
       color: white;
@@ -229,23 +248,28 @@ input[type=text]:focus {
       font-size: 28px;
       font-weight: bold;
   }
+
   .close:hover,
   .close:focus {
       color: #000;
       text-decoration: none;
       cursor: pointer;
   }
+
   .modal-header {
       padding: 2px 16px;
       background-color: #5cb85c;
       color: white;
   }
+
   .modal-body {padding: 2px 16px;}
+
   .modal-footer {
       padding: 2px 16px;
       background-color: #5cb85c;
       color: white;
   }
+
   .searchbar{ width: auto; height: 50; background: #ed5a64; margin-bottom: 50px;}
   .btn{color: white;}
   .footer{ width: auto; height: 100px; background: #ed5a64; float: bottom; margin-top: 1200px; }
@@ -265,6 +289,7 @@ input[type=text]:focus {
    }
     input[type=text]:focus {
     width: 100%;
+
 }
 p {color: white;}
 </style>
@@ -314,105 +339,6 @@ p {color: white;}
 <h2 class="w3-center" style="color:white" href ="http://itheater.herokuapp.com/movie/search">iTheater</h2>
 </div>
 <div class="adsoptimal-slot" style="width: 728px; height: 90px;"></div>
-{{#each movieList}}
-  <div class="movie">
-    <a>{{Title}}</a>
-    <img src="{{Poster}}">
-    <br>Type:{{Type}}</br>
-    <br class="movieinfo">Year:{{Year}}</br>
-    <br>IMDb:{{imdbID}}<br>
-    <a href="http://xmovies8.tv/movies/search?s={{Title}}" target="_blank"><button style=" background-color:#AAA939;" id="{{id}}">Watch movie</button></a>
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn" class="btn" style="background-color:	#AA0000;">Watch Trailer </button>
-</div>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>{{Title}} Trailer </h2>
-    </div>
-    <div class="modal-body">
-      <iframe width="650" height="350" src="http://itheater.herokuapp.com/movie/get?id={{imdbID}}" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="modal-footer">
-    </div>
-  </div>
-
-<script type="text/javascript">
-  var Trailerid = [{{imdbID}}];
-  module.exports = Trailerid;
-</script>
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-  </div>
-{{/each}}
-<script >
-	$(function () {
-		$(".youtube").YouTubeModal({autoplay:0, width:640, height:480});
-	});
-</script>
-<body>
-<div id="id01" class="modal">
-
-  <form class="modal-content animate" action="action_page.php">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="https://cdn4.iconfinder.com/data/icons/man-and-woman/154/man-person-tie-office-login-avatar-512.png" style="width:100px; height:100px;" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
-      <input type="checkbox" checked="checked"> Remember me
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-</body>
-
-
-<script>
-// Get the modal
-var modal2 = document.getElementById('id01');
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal2) {
-        modal.style.display = "none";
-    }
-}
-</script>
 
 <script type="text/javascript">
 var Title = [{{Title}}];

@@ -33,7 +33,7 @@ app.engine('handlebars', handlebars.create({
   partialDir: './views/partials',
 }).engine);
 
-app.set('view engine', 'handlebars','jQuery','bootstrap');
+app.set('view engine', 'handlebars');
 // mongodb://<dbuser>:<dbpassword>@ds117348.mlab.com:17348/itheater
 // console.log(moviedata);
 var Router = exp.Router();
