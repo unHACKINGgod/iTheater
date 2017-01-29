@@ -85,6 +85,9 @@ Router.get('/movie/search', function(req,res){
     })
 
 });
+Router.get('/movie/dashboard', function(req,res){
+  res.render('movie/dashboard')
+});
 
 
 Router.get('/movie/landpage/', function(req,res){
