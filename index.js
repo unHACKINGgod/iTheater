@@ -73,7 +73,7 @@ Router.get('/movie/moviepage', function(req,res){
 Router.get('/movie/search', function(req,res){
   var search=req.query;
   var options={
-      url: "http://www.omdbapi.com",
+      url: "http://www.omdbapi.com/?apikey=9d0288a7",
       qs: {
         s: search.moviename
       },
