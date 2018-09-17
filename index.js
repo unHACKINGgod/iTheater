@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({'extended':false}));
 app.use(bodyParser.json());
 
 
+app.use(exp.static("public"));
+
 var moviemodel = mong.model("movies",{name:String,
 city: String,
 ratings: String});
